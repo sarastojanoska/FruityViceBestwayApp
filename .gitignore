@@ -1,0 +1,99 @@
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+bin/
+obj/
+.vs/
+*.csproj.user
+*.dbmdl
+*.bak
+*.log
+
+# ASP.NET Core
+*.dotCover
+*.ncrunch*
+*.plk
+*.psess
+*.vsp
+*.vspscc
+*.vssscc
+*.user
+*.userosscache
+*.suo
+*.tmp
+*.swp
+*.suo
+*.pdb
+*.dbmdl
+*.bak
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuget
+*.nupkg
+*.snupkg
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# ASP.NET
+*.cshtml
+*.vbhtml
+*.csproj
+*.sln
+*.suo
+
+# Environment Variables
+.env
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# NuGet packages
+.nuget/
+packages/
+
+# Others
+*.db
+*.sql
+*.sqlite
+*.mdf
+*.ldf
+*.cache
+*.tmp
+*.log
+*.pidb
+*.seed
+*.suo
+*.ncb
+*.dbmdl
+
+# ASP.NET Core secrets
+secrets.json
+
+# Local configuration files
+#appsettings.Local.json
+#appsettings.Development.json
+
+# Build directories
+build/
+dist/
