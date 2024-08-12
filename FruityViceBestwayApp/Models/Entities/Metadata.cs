@@ -13,7 +13,6 @@ namespace FruityViceBestwayApp.Models.Entities
         public string Key { get; set; }
         public string Value { get; set; }
         public bool IsDeleted { get; set; }
-        public List<Dictionary<string,string>>? MetadataList { get; set; }
 
     }
 }
