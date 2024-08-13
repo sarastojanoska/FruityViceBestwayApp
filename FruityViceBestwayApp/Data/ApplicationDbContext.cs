@@ -1,4 +1,4 @@
-﻿using FruityViceBestwayApp.Models.Entities;
+﻿using FruityViceBestwayApp.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace FruityViceBestwayApp.Data

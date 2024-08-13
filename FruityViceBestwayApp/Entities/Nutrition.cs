@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace FruityViceBestwayApp.Models.Entities
+namespace FruityViceBestwayApp.Entities
 {
     public class Nutrition
     {

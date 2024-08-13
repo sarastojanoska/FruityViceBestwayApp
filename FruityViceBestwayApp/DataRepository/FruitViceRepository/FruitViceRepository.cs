@@ -1,5 +1,5 @@
 ﻿using FruityViceBestwayApp.Data;
-using FruityViceBestwayApp.Models.Entities;
+using FruityViceBestwayApp.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace FruityViceBestwayApp.DataRepository
@@ -15,18 +15,9 @@ namespace FruityViceBestwayApp.DataRepository
 
         public async Task<Fruit> GetFruitByName(string fruit)
         {
-
-            var result = new Fruit();
-
-            try
-            {
-                result = await _context.Fruits.FirstOrDefaultAsync(x => x.Name.Equals(fruit));
-            }
-            catch (Exception ex)
-            {
-                ex.GetBaseException();
-            }
-
+            var result = await _context.Fruits
+                .Include(f => f.Nutrition)
+                .FirstOrDefaultAsync(x => x.Name.Equals(fruit));
             return result;
         }
         public async Task<Nutrition> GetNutritionByFruitId(int fruitId)
@@ -43,8 +34,16 @@ namespace FruityViceBestwayApp.DataRepository
         }
         public async Task AddFruit(Fruit fruit)
         {
-            _context.Fruits.Add(fruit);
-            await _context.SaveChangesAsync();
+            var fr = new Fruit();
+            try
+            {
+                _context.Fruits.Add(fruit);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error adding fruit: " + ex.Message);
+            }
         }
 
         public async Task AddMetadata(Metadata metadata)

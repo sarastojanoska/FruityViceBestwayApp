@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FruityViceBestwayApp.Models.Entities
+namespace FruityViceBestwayApp.Entities
 {
     public class Metadata
     {
